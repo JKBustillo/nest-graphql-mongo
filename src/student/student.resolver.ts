@@ -22,6 +22,6 @@ export class StudentResolver {
 
   @Query((returns) => [StudentType])
   getStudents() {
-    return this.studentService.getStudents();
+    return this.studentService.getAllStudents();
   }
 }
