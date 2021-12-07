@@ -6,6 +6,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { Lesson } from './lesson/lesson.entity';
 import { LessonModule } from './lesson/lesson.module';
+import { StudentModule } from './student/student.module';
 
 @Module({
   imports: [
@@ -20,6 +21,7 @@ import { LessonModule } from './lesson/lesson.module';
       autoSchemaFile: true,
     }),
     LessonModule,
+    StudentModule,
   ],
   controllers: [AppController],
   providers: [AppService],
