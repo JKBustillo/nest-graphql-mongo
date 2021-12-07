@@ -6,6 +6,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { Lesson } from './lesson/lesson.entity';
 import { LessonModule } from './lesson/lesson.module';
+import { Student } from './student/student.entity';
 import { StudentModule } from './student/student.module';
 
 @Module({
@@ -15,7 +16,7 @@ import { StudentModule } from './student/student.module';
       url: 'mongodb://localhost/school',
       synchronize: true,
       useUnifiedTopology: true,
-      entities: [Lesson],
+      entities: [Lesson, Student],
     }),
     GraphQLModule.forRoot({
       autoSchemaFile: true,
@@ -26,4 +27,4 @@ import { StudentModule } from './student/student.module';
   controllers: [AppController],
   providers: [AppService],
 })
-export class AppModule { }
+export class AppModule {}

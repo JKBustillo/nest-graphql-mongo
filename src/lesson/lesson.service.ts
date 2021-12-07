@@ -11,7 +11,7 @@ export class LessonService {
   constructor(
     @InjectRepository(Lesson)
     private lessonRepository: Repository<Lesson>,
-  ) { }
+  ) {}
 
   async createLesson(createLessonInput: CreateLessonInput): Promise<Lesson> {
     const lesson = this.lessonRepository.create({
